@@ -1,0 +1,22 @@
+name: Build MusicMod
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+      - name: Build
+        run: cd musicchat && ./gradlew build
+      - name: Upload JAR
+        uses: actions/upload-artifact@v3
+        with:
+          name: MusicMod
+          path: musicchat/build/libs/*.jar
