@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "musicchat",
+  "version": "1.0.0",
+  "name": "MusicChat",
+  "description": "Nhắn !nhac để gửi 1 bài nhạc ngẫu nhiên lên chat",
+  "authors": ["ban"],
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.example.musicchat.MusicChatMod"]
+  },
+  "mixins": ["musicchat.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
