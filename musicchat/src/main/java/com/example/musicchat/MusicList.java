@@ -109,9 +109,20 @@ public class MusicList {
             "Just a young gun with a quick fuse / I was uptight wanna use my free time~",
             "minecraft:music.creative", "rock"),
         new Song("[Rock] Natural - Imagine Dragons",
-            "Will you hold the line when every one of them has given up and given in tell me / In this house of mine~",
+            "Will you hold the line when every one of them has given up and given in / In this house of mine~",
             "minecraft:music.game", "rock")
     );
 
     public static Song getRandom() {
-        return
+        return SONGS.get(RANDOM.nextInt(SONGS.size()));
+    }
+
+    public static Song getByGenre(String genre) {
+        if (genre.equals("all")) return getRandom();
+        List<Song> filtered = SONGS.stream()
+            .filter(s -> s.genre.equalsIgnoreCase(genre))
+            .collect(Collectors.toList());
+        if (filtered.isEmpty()) return null;
+        return filtered.get(RANDOM.nextInt(filtered.size()));
+    }
+}
