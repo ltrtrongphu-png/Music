@@ -1,9 +1,9 @@
 package com.example.musicchat;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
-import java.util.Arrays;
 
 public class MusicList {
 
@@ -13,7 +13,7 @@ public class MusicList {
         public final String title;
         public final String lyrics;
         public final String sound;
-        public final String genre; // "viet", "pop", "rock"
+        public final String genre;
 
         public Song(String title, String lyrics, String sound, String genre) {
             this.title = title;
@@ -24,95 +24,94 @@ public class MusicList {
     }
 
     private static final List<Song> SONGS = Arrays.asList(
-        // NHẠC VIỆT
-        new Song("🌸 Có Chắc Yêu Là Đây - Sơn Tùng MTP",
-            "♩ Có chắc yêu là đây, là đây không em\nHay chỉ là trò chơi không tên~ ♩",
+
+        // NHAC VIET
+        new Song("[Viet] Co Chac Yeu La Day - Son Tung MTP",
+            "Co chac yeu la day, la day khong em / Hay chi la tro choi khong ten~",
             "minecraft:music.game", "viet"),
-        new Song("🌺 Waiting For You - MONO",
-            "♪ I'm waiting for you, every single night\nStaring at the ceiling thinking of you~ ♪",
+        new Song("[Viet] Waiting For You - MONO",
+            "I'm waiting for you, every single night / Staring at the ceiling thinking of you~",
             "minecraft:music.game.underwater", "viet"),
-        new Song("🎤 Nơi Này Có Anh - Sơn Tùng MTP",
-            "♩ Nơi này có anh, có anh chờ em\nDù cho ngày mai em có đi xa~ ♩",
+        new Song("[Viet] Noi Nay Co Anh - Son Tung MTP",
+            "Noi nay co anh, co anh cho em / Du cho ngay mai em co di xa~",
             "minecraft:music.game", "viet"),
-        new Song("🎵 Chúng Ta Của Hiện Tại - Sơn Tùng MTP",
-            "♪ Chúng ta của hiện tại mãi vẫn còn đây\nDù ngày mai có ra sao~ ♪",
+        new Song("[Viet] Chung Ta Cua Hien Tai - Son Tung MTP",
+            "Chung ta cua hien tai mai van con day / Du ngay mai co ra sao~",
             "minecraft:music.menu", "viet"),
-        new Song("🌸 Đừng Làm Trái Tim Anh Đau - Sơn Tùng MTP",
-            "♩ Dù sao thì anh cũng yêu em thật rồi\nEm ơi đừng làm trái tim anh đau~ ♩",
-            "minecraft:music.game", "viet"),
-        new Song("🎸 Muộn Rồi Mà Sao Còn - Sơn Tùng MTP",
-            "♪ Muộn rồi mà sao còn, sao còn\nAnh biết rồi nhưng cứ giả vờ thôi~ ♪",
+        new Song("[Viet] Muon Roi Ma Sao Con - Son Tung MTP",
+            "Muon roi ma sao con, sao con / Anh biet roi nhung cu gia vo thoi~",
             "minecraft:music.creative", "viet"),
-        new Song("🎵 Hãy Trao Cho Anh - Sơn Tùng MTP",
-            "♩ Hãy trao cho anh, hãy trao cho anh\nTình yêu trong tim em~ ♩",
+        new Song("[Viet] Hay Trao Cho Anh - Son Tung MTP",
+            "Hay trao cho anh, hay trao cho anh / Tinh yeu trong tim em~",
+            "minecraft:music.game", "viet"),
+        new Song("[Viet] Dung Lam Trai Tim Anh Dau - Son Tung MTP",
+            "Du sao thi anh cung yeu em that roi / Em oi dung lam trai tim anh dau~",
             "minecraft:music.game", "viet"),
 
-        // NHẠC POP
-        new Song("🎹 Blinding Lights - The Weeknd",
-            "♪ I've been tryna call, I'm in your walls\nI've been running through the night~ ♪",
+        // NHAC POP
+        new Song("[Pop] Blinding Lights - The Weeknd",
+            "I've been tryna call, I'm in your walls / I've been running through the night~",
             "minecraft:music.creative", "pop"),
-        new Song("🎵 Shape of You - Ed Sheeran",
-            "♩ The club isn't the best place to find a lover\nSo the bar is where I go~ ♩",
+        new Song("[Pop] Shape of You - Ed Sheeran",
+            "The club isn't the best place to find a lover / So the bar is where I go~",
             "minecraft:music.menu", "pop"),
-        new Song("🎤 As It Was - Harry Styles",
-            "♪ In this world, it's just us\nYou know it's not the same as it was~ ♪",
+        new Song("[Pop] As It Was - Harry Styles",
+            "In this world, it's just us / You know it's not the same as it was~",
             "minecraft:music.game", "pop"),
-        new Song("🎺 Levitating - Dua Lipa",
-            "♩ I got you, moonlight, you're my starlight\nI need you all night, come on, dance with me~ ♩",
+        new Song("[Pop] Levitating - Dua Lipa",
+            "I got you moonlight you're my starlight / I need you all night come on dance with me~",
             "minecraft:music.game", "pop"),
-        new Song("🎵 Stay - Justin Bieber",
-            "♪ I do not wanna fall in love\nIf I ever did that, I think I'd have a heart attack~ ♪",
+        new Song("[Pop] Stay - Justin Bieber",
+            "I do not wanna fall in love / If I ever did that I think I'd have a heart attack~",
             "minecraft:music.menu", "pop"),
-        new Song("🎤 Someone Like You - Adele",
-            "♩ Never mind, I'll find someone like you\nI wish nothing but the best for you~ ♩",
+        new Song("[Pop] Someone Like You - Adele",
+            "Never mind I'll find someone like you / I wish nothing but the best for you~",
             "minecraft:music.game.underwater", "pop"),
-        new Song("🎵 Watermelon Sugar - Harry Styles",
-            "♪ Tastes like strawberries on a summer evening\nAnd it sounds just like a song~ ♪",
+        new Song("[Pop] Watermelon Sugar - Harry Styles",
+            "Tastes like strawberries on a summer evening / And it sounds just like a song~",
             "minecraft:music.game", "pop"),
-        new Song("🎹 Perfect - Ed Sheeran",
-            "♩ I found a love for me\nDarling just dive right in, follow my lead~ ♩",
+        new Song("[Pop] Perfect - Ed Sheeran",
+            "I found a love for me / Darling just dive right in follow my lead~",
             "minecraft:music.creative", "pop"),
-        new Song("🎵 Sunflower - Post Malone",
-            "♪ Every time I'm leavin' on you\nYou don't make it easy, no~ ♪",
+        new Song("[Pop] Sunflower - Post Malone",
+            "Every time I'm leavin' on you / You don't make it easy no~",
             "minecraft:music.game", "pop"),
-        new Song("🎤 Heat Waves - Glass Animals",
-            "♩ Sometimes, all I think about is you\nLate nights in the middle of June~ ♩",
+        new Song("[Pop] Heat Waves - Glass Animals",
+            "Sometimes all I think about is you / Late nights in the middle of June~",
             "minecraft:music.game.credits", "pop"),
+        new Song("[Pop] Happier - Marshmello",
+            "I want you to be happier I want you to be happier / When the morning comes~",
+            "minecraft:music.game", "pop"),
+        new Song("[Pop] Let Her Go - Passenger",
+            "Only know you love her when you let her go / And you let her go~",
+            "minecraft:music.creative", "pop"),
+        new Song("[Pop] Photograph - Ed Sheeran",
+            "Loving can hurt loving can hurt sometimes / But it's the only thing that I know~",
+            "minecraft:music.game", "pop"),
 
-        // NHẠC ROCK
-        new Song("🎸 Bohemian Rhapsody - Queen",
-            "♩ Is this the real life? Is this just fantasy?\nCaught in a landslide, no escape from reality~ ♩",
+        // NHAC ROCK
+        new Song("[Rock] Bohemian Rhapsody - Queen",
+            "Is this the real life? Is this just fantasy? / Caught in a landslide no escape from reality~",
             "minecraft:music.game", "rock"),
-        new Song("🎸 Counting Stars - OneRepublic",
-            "♪ Lately I been, I been losing sleep\nDreaming about the things that we could be~ ♪",
+        new Song("[Rock] Counting Stars - OneRepublic",
+            "Lately I been I been losing sleep / Dreaming about the things that we could be~",
             "minecraft:music.game.nether_wastes", "rock"),
-        new Song("🎻 Demons - Imagine Dragons",
-            "♩ When the days are cold and the cards all fold\nAnd the saints we see are all made of gold~ ♩",
+        new Song("[Rock] Demons - Imagine Dragons",
+            "When the days are cold and the cards all fold / And the saints we see are all made of gold~",
             "minecraft:music.creative", "rock"),
-        new Song("🥁 Believer - Imagine Dragons",
-            "♪ First things first, I'ma say all the words inside my head\nI'm fired up and tired of the way that things have been~ ♪",
+        new Song("[Rock] Believer - Imagine Dragons",
+            "First things first I'ma say all the words inside my head / I'm fired up and tired of the way that things have been~",
             "minecraft:music.game", "rock"),
-        new Song("🎸 Stressed Out - Twenty One Pilots",
-            "♩ I wish I found some better sounds no one's ever heard\nI wish I had a better voice that sang some better words~ ♩",
+        new Song("[Rock] Stressed Out - Twenty One Pilots",
+            "I wish I found some better sounds no one's ever heard / I wish I had a better voice that sang some better words~",
             "minecraft:music.game", "rock"),
-        new Song("🎵 Let Her Go - Passenger",
-            "♪ Only know you love her when you let her go\nAnd you let her go~ ♪",
+        new Song("[Rock] Thunder - Imagine Dragons",
+            "Just a young gun with a quick fuse / I was uptight wanna use my free time~",
             "minecraft:music.creative", "rock"),
-        new Song("🎸 Stay With Me - Sam Smith",
-            "♩ Guess it's true, I'm not good at a one-night stand\nBut I still need love cause I'm just a man~ ♩",
-            "minecraft:music.game.underwater", "rock")
+        new Song("[Rock] Natural - Imagine Dragons",
+            "Will you hold the line when every one of them has given up and given in tell me / In this house of mine~",
+            "minecraft:music.game", "rock")
     );
 
     public static Song getRandom() {
-        return SONGS.get(RANDOM.nextInt(SONGS.size()));
-    }
-
-    public static Song getByGenre(String genre) {
-        if (genre.equals("all")) return getRandom();
-        List<Song> filtered = SONGS.stream()
-            .filter(s -> s.genre.equalsIgnoreCase(genre))
-            .collect(Collectors.toList());
-        if (filtered.isEmpty()) return null;
-        return filtered.get(RANDOM.nextInt(filtered.size()));
-    }
-}
+        return
