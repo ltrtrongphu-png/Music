@@ -1,4 +1,4 @@
-name: Build MusicMod
+name: Build Mod
 
 on:
   push:
@@ -13,8 +13,10 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
       - name: Build
-        run: cd musicchat && ./gradlew build
+        run: cd musicchat && gradle build
       - name: Upload JAR
         uses: actions/upload-artifact@v4
         with:
